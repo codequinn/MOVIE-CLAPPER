@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+  }
+  html, body {
+    align-items: center;  
+    background: repeating-linear-gradient(-135deg,#444 0%, #ffffff 10%, #444 10%, #444 20%);
+    display: flex;
+    font-family: 'Heebo', sans-serif;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
+    width: 100vw;
+  }
+  .clapper > div:nth-of-type(1) {
+    animation-name: open;
+    transform-origin: left;
+    animation-duration: .25s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  @keyframes open {
+    to {
+      transform: rotate(-80deg);
+    }
+  }
+  
+  .clapper {
+    background-color: #111;
+    height: 80px;
+    width: 100px;
+    position: relative;
+    align-items: start;
+  }
+  .clapper > div {
+    background: repeating-linear-gradient(135deg, #111 0%, #111 10%, #fff 10%, #fff 20%);
+    height: 10px;
+    width: 110px;
+    position: absolute;
+    left: -5px;
+    top: 0;
+    align-items: start;
+  }
+  .clapper > div:nth-of-type(1) {
+    background: repeating-linear-gradient(-135deg, #fff 0%, #fff 10%, #111 10%, #111 20%);
+    top: -10px;
+    
+  }
+  
+  
+  
+  
+  
+  @import url('https://fonts.googleapis.com/css?family=Heebo:800');
